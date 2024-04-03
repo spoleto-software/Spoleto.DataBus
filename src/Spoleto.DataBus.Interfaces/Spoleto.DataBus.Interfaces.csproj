@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net7.0;net8.0;netstandard2.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- Package info -->
+    <PropertyGroup>
+        <Title>Spoleto.DataBus.Interfaces</Title>
+        <PackageId>Spoleto.DataBus.Interfaces</PackageId>
+        <PackageTags>Spoleto.DataBus.Interfaces; Spoleto.DataBus; DataBus; ШинаДанных</PackageTags>
+        <Description>The base library for Spoleto.DataBus</Description>
+    </PropertyGroup>
+
+</Project>
