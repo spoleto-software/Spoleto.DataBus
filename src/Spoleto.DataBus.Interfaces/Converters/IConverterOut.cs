@@ -1,9 +1,13 @@
-﻿namespace Spoleto.DataBus.Interfaces.Converters
+﻿using Spoleto.DataBus.Interfaces.Models;
+
+namespace Spoleto.DataBus.Interfaces.Converters
 {
     /// <summary>
     /// The output converter.
     /// </summary>
-    public interface IConverterOut : IConverter
-	{
+    public interface IConverterOut<TInput, TOutput> : IConverter<TInput, TOutput>
+        where TInput : IConverterData
+        where TOutput : IConverterData
+    {
 	}
 }

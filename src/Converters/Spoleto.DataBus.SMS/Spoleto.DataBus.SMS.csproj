@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net7.0;net8.0;netstandard2.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <!-- Options to use this project as plugin -->
+    <PropertyGroup>
+        <!-- Prepares the project so that it can be used as a plugin. -->
+        <EnableDynamicLoading>true</EnableDynamicLoading>
+    </PropertyGroup>
+
+    <!-- Package info -->
+    <PropertyGroup>
+        <Title>Spoleto.DataBus.SMS</Title>
+        <PackageId>Spoleto.DataBus.SMS</PackageId>
+        <PackageTags>Spoleto.DataBus.SMS; Spoleto.DataBus; DataBus; SMS; ШинаДанных</PackageTags>
+        <Description>The SMS converters for Spoleto.DataBus</Description>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageReference Include="Spoleto.SMS" Version="1.4.0" />
+        <PackageReference Include="Spoleto.SMS.GetSms" Version="1.4.0" />
+        <PackageReference Include="Spoleto.SMS.Smsc" Version="1.4.0" />
+        <PackageReference Include="Spoleto.SMS.SmsTraffic" Version="1.4.0" />
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\Spoleto.DataBus.Interfaces\Spoleto.DataBus.Interfaces.csproj">
+            <!-- Options to use this project as plugin -->
+            <Private>false</Private>
+            <ExcludeAssets>runtime</ExcludeAssets>
+        </ProjectReference>
+    </ItemGroup>
+
+
+</Project>
