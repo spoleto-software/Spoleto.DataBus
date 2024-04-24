@@ -5,7 +5,9 @@ namespace Spoleto.DataBus.Interfaces.Converters
     /// <summary>
     /// The base converter.
     /// </summary>
-	public interface IConverter<TInput, TOutput> 
+    /// <typeparam name="TInput">The input data.</typeparam>
+    /// <typeparam name="TOutput">The ouput data.</typeparam>
+    public interface IConverter<TInput, TOutput> 
         where TInput : IConverterData
         where TOutput : IConverterData
     {

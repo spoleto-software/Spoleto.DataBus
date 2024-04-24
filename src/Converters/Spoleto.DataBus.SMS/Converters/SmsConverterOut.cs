@@ -2,16 +2,21 @@
 using Spoleto.DataBus.SMS.Models;
 using Spoleto.SMS;
 
-
 namespace Spoleto.DataBus.SMS.Converters
 {
-    public class SmsConverterOut : IConverterOut<SmsModel, Spoleto.DataBus.SMS.Models.SmsSendingResult>
+    /// <summary>
+    /// The SMS output converter.
+    /// </summary>
+    /// <remarks>
+    /// Makes the HTTP request to the SMS service, receives the respond and returns it as output.
+    /// </remarks>
+    public class SmsConverterOut : ConverterOutBase<SmsModel, Spoleto.DataBus.SMS.Models.SmsSendingResult>
     {
-        public string Name => "SMS";
+        public override string Name => "SMS";
 
-        public string Description => "Makes the HTTP request to the SMS service, receives the respond and returns it as output.";
+        public override string Description => "Makes the HTTP request to the SMS service, receives the respond and returns it as output.";
 
-        public Spoleto.DataBus.SMS.Models.SmsSendingResult Convert(SmsModel source)
+        public override Spoleto.DataBus.SMS.Models.SmsSendingResult Convert(SmsModel source)
         {
             var smsMessage = new SmsMessage(source.Body, source.From, source.To, source.IsAllowSendToForeignNumbers, source.ProviderData);
             var smsService = SmsConverterOut.CreateSmsService(source);
@@ -67,11 +72,5 @@ namespace Spoleto.DataBus.SMS.Converters
 
             return smsService;
         }
-
-#if !NET5_0_OR_GREATER
-        public Type InputType => typeof(SmsModel);
-
-        public Type OutputType => typeof(SmsSendingResult);
-#endif
     }
 }
