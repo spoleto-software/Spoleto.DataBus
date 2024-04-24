@@ -16,10 +16,8 @@ namespace Spoleto.DataBus.Interfaces.Converters
 
         public abstract TOutput Convert(TInput source);
 
-#if !NET5_0_OR_GREATER
         public Type InputType => typeof(TInput);
 
         public Type OutputType => typeof(TOutput);
-#endif
     }
 }

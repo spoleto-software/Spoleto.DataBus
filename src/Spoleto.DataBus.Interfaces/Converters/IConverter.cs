@@ -5,9 +5,25 @@ namespace Spoleto.DataBus.Interfaces.Converters
     /// <summary>
     /// The base converter.
     /// </summary>
+    public interface IConverter
+    {
+        /// <summary>
+        /// Gets the input data type.
+        /// </summary>
+        Type InputType { get; }
+
+        /// <summary>
+        /// Gets the output data type.
+        /// </summary>
+        Type OutputType { get; }
+    }
+
+    /// <summary>
+    /// The base converter with generic input and output data types..
+    /// </summary>
     /// <typeparam name="TInput">The input data.</typeparam>
     /// <typeparam name="TOutput">The ouput data.</typeparam>
-    public interface IConverter<TInput, TOutput> 
+    public interface IConverter<TInput, TOutput> : IConverter
         where TInput : IConverterData
         where TOutput : IConverterData
     {
@@ -30,28 +46,5 @@ namespace Spoleto.DataBus.Interfaces.Converters
         /// <param name="source">The input data.</param>
         /// <returns>The output data.</returns>
         TOutput Convert(TInput source);
-
-#if NET5_0_OR_GREATER
-        /// <summary>
-        /// Gets the input data type.
-        /// </summary>
-        Type InputType => typeof(TInput);
-
-        /// <summary>
-        /// Gets the output data type.
-        /// </summary>
-        Type OutputType => typeof(TOutput);
-#else
-        /// <summary>
-        /// Gets the input data type.
-        /// </summary>
-        Type InputType { get; }
-
-        /// <summary>
-        /// Gets the output data type.
-        /// </summary>
-        Type OutputType { get; }
-#endif
-
     }
 }
