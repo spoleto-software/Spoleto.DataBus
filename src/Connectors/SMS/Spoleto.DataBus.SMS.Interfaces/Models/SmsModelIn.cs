@@ -5,7 +5,7 @@ namespace Spoleto.DataBus.SMS.Interfaces
     /// <summary>
     /// The full information about SMS to send.
     /// </summary>
-    public record SmsModelIn : IConverterData
+    public record SmsModelIn : IConnectorData
     {
         /// <summary>
         /// Gets or sets the message body.

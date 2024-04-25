@@ -1,6 +1,6 @@
 ﻿using Spoleto.DataBus.Interfaces.Models;
 
-namespace Spoleto.DataBus.Interfaces.Converters
+namespace Spoleto.DataBus.Interfaces.Connectors
 {
     /// <summary>
     /// The base class for configurable conveters.
@@ -8,11 +8,11 @@ namespace Spoleto.DataBus.Interfaces.Converters
     /// <typeparam name="TInput">The input data type.</typeparam>
     /// <typeparam name="TOutput">The ouput data type.</typeparam>
     /// <typeparam name="TOptions">The options type.</typeparam>
-    public abstract class ConfigurableConverterBase<TInput, TOutput, TOptions> :
-        ConverterBase<TInput, TOutput>,
-        IConfigurableConverter<TInput, TOutput, TOptions>
-        where TInput : IConverterData
-        where TOutput : IConverterData
+    public abstract class ConfigurableConnectorBase<TInput, TOutput, TOptions> :
+        ConnectorBase<TInput, TOutput>,
+        IConfigurableConnector<TInput, TOutput, TOptions>
+        where TInput : IConnectorData
+        where TOutput : IConnectorData
         where TOptions : IConnectorOptions
     {
         public abstract Task<TOptions?> GetOptions();

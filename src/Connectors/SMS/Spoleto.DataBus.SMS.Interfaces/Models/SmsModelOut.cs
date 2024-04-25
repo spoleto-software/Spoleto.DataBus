@@ -5,7 +5,7 @@ namespace Spoleto.DataBus.SMS.Interfaces
     /// <summary>
     /// The result of SMS sending.
     /// </summary>
-    public record SmsModelOut : IConverterData
+    public record SmsModelOut : IConnectorData
     {
         /// <summary>
         /// Gets or sets if the SMS has been sent successfully.

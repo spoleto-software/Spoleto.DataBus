@@ -1,15 +1,15 @@
-﻿using Spoleto.DataBus.Interfaces.Converters;
+﻿using Spoleto.DataBus.Interfaces.Connectors;
 using Spoleto.DataBus.SMS.Interfaces;
 
-namespace Spoleto.DataBus.SMS.Converters
+namespace Spoleto.DataBus.SMS.Connectors
 {
     /// <summary>
-    /// The SMS input converter.
+    /// The SMS input connector.
     /// </summary>
     /// <remarks>
     /// Gets the SMS model by Web API and returns it as is.
     /// </remarks>
-    public class SmsConverterIn : ConverterInBase<SmsModelIn, SmsModelIn>
+    public class SmsConnectorIn : ConnectorInBase<SmsModelIn, SmsModelIn>
     {
         public const string ConnectorName = "SMS"; //todo: add "In" ?
 

@@ -1,11 +1,11 @@
 ﻿using Spoleto.DataBus.Interfaces.Models;
 
-namespace Spoleto.DataBus.Interfaces.Converters
+namespace Spoleto.DataBus.Interfaces.Connectors
 {
     /// <summary>
-    /// The base configurable converter with options.
+    /// The base configurable connector with options.
     /// </summary>
-    public interface IConfigurableConverter : IConverter
+    public interface IConfigurableConnector : IConnector
     {
         /// <summary>
         /// Gets the options type.
@@ -14,26 +14,26 @@ namespace Spoleto.DataBus.Interfaces.Converters
     }
 
     /// <summary>
-    /// The base configurable converter with generic input and output data types and options type.
+    /// The base configurable connector with generic input and output data types and options type.
     /// </summary>
     /// <typeparam name="TInput">The input data type.</typeparam>
     /// <typeparam name="TOutput">The ouput data type.</typeparam>
     /// <typeparam name="TOptions">The options type.</typeparam>
-    public interface IConfigurableConverter<TInput, TOutput, TOptions> : IConfigurableConverter, IConverter<TInput, TOutput>
-        where TInput : IConverterData
-        where TOutput : IConverterData
+    public interface IConfigurableConnector<TInput, TOutput, TOptions> : IConfigurableConnector, IConnector<TInput, TOutput>
+        where TInput : IConnectorData
+        where TOutput : IConnectorData
         where TOptions : IConnectorOptions
     {        
         /// <summary>
-        /// Gets the converter options.
+        /// Gets the connector options.
         /// </summary>
-        /// <returns>The converter options.</returns>
+        /// <returns>The connector options.</returns>
         Task<TOptions?> GetOptions();
 
         /// <summary>
-        /// Sets the converter options.
+        /// Sets the connector options.
         /// </summary>
-        /// <param name="options">The converter options to set.</param>
+        /// <param name="options">The connector options to set.</param>
         Task SetOptions(TOptions options);
     }
 }

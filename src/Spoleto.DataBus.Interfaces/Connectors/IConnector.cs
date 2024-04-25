@@ -1,22 +1,22 @@
 ﻿using Spoleto.DataBus.Interfaces.Models;
 
-namespace Spoleto.DataBus.Interfaces.Converters
+namespace Spoleto.DataBus.Interfaces.Connectors
 {
     /// <summary>
-    /// The base converter.
+    /// The base connector.
     /// </summary>
-    public interface IConverter
+    public interface IConnector
     {
         /// <summary>
-        /// Gets the converter name.
+        /// Gets the connector name.
         /// </summary>
         /// <remarks>
-        /// The name has to be unique among input or output converters.
+        /// The name has to be unique among input or output connectors.
         /// </remarks>
         string Name { get; }
 
         /// <summary>
-        /// Gets the converter description.
+        /// Gets the connector description.
         /// </summary>
         string Description { get; }
 
@@ -32,13 +32,13 @@ namespace Spoleto.DataBus.Interfaces.Converters
     }
 
     /// <summary>
-    /// The base converter with generic input and output data types..
+    /// The base connector with generic input and output data types..
     /// </summary>
     /// <typeparam name="TInput">The input data type.</typeparam>
     /// <typeparam name="TOutput">The ouput data type.</typeparam>
-    public interface IConverter<TInput, TOutput> : IConverter
-        where TInput : IConverterData
-        where TOutput : IConverterData
+    public interface IConnector<TInput, TOutput> : IConnector
+        where TInput : IConnectorData
+        where TOutput : IConnectorData
     {
         /// <summary>
         /// Converts the input data to output data.

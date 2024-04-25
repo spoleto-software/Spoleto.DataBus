@@ -1,16 +1,16 @@
-﻿using Spoleto.DataBus.Interfaces.Converters;
+﻿using Spoleto.DataBus.Interfaces.Connectors;
 using Spoleto.DataBus.SMS.Interfaces;
 using Spoleto.SMS;
 
-namespace Spoleto.DataBus.SMS.Converters
+namespace Spoleto.DataBus.SMS.Connectors
 {
     /// <summary>
-    /// The SMS output converter.
+    /// The SMS output connector.
     /// </summary>
     /// <remarks>
     /// Makes the HTTP request to the SMS service, receives the respond and returns it as output.
     /// </remarks>
-    public class SmsConverterOut : ConfigurableConverterOutBase<SmsModelIn, SmsModelOut, SmsConnectorOutOptions>
+    public class SmsConnectorOut : ConfigurableConnectorOutBase<SmsModelIn, SmsModelOut, SmsConnectorOutOptions>
     {
         public const string ConnectorName = "SMS"; //todo: add "Out" ?
 

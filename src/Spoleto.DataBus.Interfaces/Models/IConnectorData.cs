@@ -1,9 +1,9 @@
 ﻿namespace Spoleto.DataBus.Interfaces.Models
 {
     /// <summary>
-    /// The data used in converters (input or output).
+    /// The data used in connectors (input or output).
     /// </summary>
-    public interface IConverterData
+    public interface IConnectorData
     {
     }
 }

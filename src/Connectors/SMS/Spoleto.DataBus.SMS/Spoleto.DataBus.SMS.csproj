@@ -17,7 +17,7 @@
         <Title>Spoleto.DataBus.SMS</Title>
         <PackageId>Spoleto.DataBus.SMS</PackageId>
         <PackageTags>Spoleto.DataBus.SMS; Spoleto.DataBus; DataBus; SMS; ШинаДанных</PackageTags>
-        <Description>The SMS converters for Spoleto.DataBus</Description>
+        <Description>The SMS connectors for Spoleto.DataBus</Description>
     </PropertyGroup>
     
     <ItemGroup>
