@@ -27,10 +27,10 @@ jobs:
         run: dotnet pack --include-symbols -p:SymbolPackageFormat=snupkg --no-build -c Release src/Spoleto.DataBus.Interfaces/Spoleto.DataBus.Interfaces.csproj -o .
 
       - name: Pack Spoleto.DataBus.SMS
-        run: dotnet pack --include-symbols -p:SymbolPackageFormat=snupkg --no-build -c Release src/Converters/Spoleto.DataBus.SMS/Spoleto.DataBus.SMS.csproj -o .
+        run: dotnet pack --include-symbols -p:SymbolPackageFormat=snupkg --no-build -c Release src/Connectors/SMS/Spoleto.DataBus.SMS/Spoleto.DataBus.SMS.csproj -o .
 
       - name: Pack Spoleto.DataBus.SMS.Interfaces
-        run: dotnet pack --include-symbols -p:SymbolPackageFormat=snupkg --no-build -c Release src/Converters/Spoleto.DataBus.SMS.Interfaces/Spoleto.DataBus.SMS.Interfaces.csproj -o .
+        run: dotnet pack --include-symbols -p:SymbolPackageFormat=snupkg --no-build -c Release src/Connectors/SMS/Spoleto.DataBus.SMS.Interfaces/Spoleto.DataBus.SMS.Interfaces.csproj -o .
 
         # Push packages to Nuget
       - name: Push packages
