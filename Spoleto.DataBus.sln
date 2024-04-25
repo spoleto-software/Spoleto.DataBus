@@ -22,7 +22,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Ac
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Converters", "Converters", "{338F16EF-5433-4AE6-8E8B-061295541B48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spoleto.DataBus.SMS", "src\Converters\Spoleto.DataBus.SMS\Spoleto.DataBus.SMS.csproj", "{2DE7D800-2FDA-4F33-9240-902E11D508E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Spoleto.DataBus.SMS", "src\Converters\SMS\Spoleto.DataBus.SMS\Spoleto.DataBus.SMS.csproj", "{2DE7D800-2FDA-4F33-9240-902E11D508E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Spoleto.DataBus.SMS.Interfaces", "src\Converters\SMS\Spoleto.DataBus.SMS.Interfaces\Spoleto.DataBus.SMS.Interfaces.csproj", "{A72F6925-6D63-4B4C-8247-7CBD4F35F4C9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SMS", "SMS", "{FB438BCA-16DA-469B-9D1E-4E87FFB17432}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,12 +42,18 @@ Global
 		{2DE7D800-2FDA-4F33-9240-902E11D508E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2DE7D800-2FDA-4F33-9240-902E11D508E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2DE7D800-2FDA-4F33-9240-902E11D508E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A72F6925-6D63-4B4C-8247-7CBD4F35F4C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A72F6925-6D63-4B4C-8247-7CBD4F35F4C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A72F6925-6D63-4B4C-8247-7CBD4F35F4C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A72F6925-6D63-4B4C-8247-7CBD4F35F4C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2DE7D800-2FDA-4F33-9240-902E11D508E8} = {338F16EF-5433-4AE6-8E8B-061295541B48}
+		{2DE7D800-2FDA-4F33-9240-902E11D508E8} = {FB438BCA-16DA-469B-9D1E-4E87FFB17432}
+		{A72F6925-6D63-4B4C-8247-7CBD4F35F4C9} = {FB438BCA-16DA-469B-9D1E-4E87FFB17432}
+		{FB438BCA-16DA-469B-9D1E-4E87FFB17432} = {338F16EF-5433-4AE6-8E8B-061295541B48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {AD8D33F0-4E2A-4506-99E5-43D5F85B3738}

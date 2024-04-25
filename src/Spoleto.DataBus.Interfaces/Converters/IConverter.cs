@@ -8,6 +8,19 @@ namespace Spoleto.DataBus.Interfaces.Converters
     public interface IConverter
     {
         /// <summary>
+        /// Gets the converter name.
+        /// </summary>
+        /// <remarks>
+        /// The name has to be unique among input or output converters.
+        /// </remarks>
+        string Name { get; }
+
+        /// <summary>
+        /// Gets the converter description.
+        /// </summary>
+        string Description { get; }
+
+        /// <summary>
         /// Gets the input data type.
         /// </summary>
         Type InputType { get; }
@@ -21,25 +34,12 @@ namespace Spoleto.DataBus.Interfaces.Converters
     /// <summary>
     /// The base converter with generic input and output data types..
     /// </summary>
-    /// <typeparam name="TInput">The input data.</typeparam>
-    /// <typeparam name="TOutput">The ouput data.</typeparam>
+    /// <typeparam name="TInput">The input data type.</typeparam>
+    /// <typeparam name="TOutput">The ouput data type.</typeparam>
     public interface IConverter<TInput, TOutput> : IConverter
         where TInput : IConverterData
         where TOutput : IConverterData
     {
-        /// <summary>
-        /// Gets the converter name.
-        /// </summary>
-        /// <remarks>
-        /// The name has to be unique among input or output converters.
-        /// </remarks>
-        string Name { get; }
-        
-        /// <summary>
-        /// Gets the converter description.
-        /// </summary>
-        string Description { get; }
-
         /// <summary>
         /// Converts the input data to output data.
         /// </summary>

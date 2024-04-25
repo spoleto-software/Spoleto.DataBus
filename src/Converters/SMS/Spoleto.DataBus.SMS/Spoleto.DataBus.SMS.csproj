@@ -19,19 +19,21 @@
         <PackageTags>Spoleto.DataBus.SMS; Spoleto.DataBus; DataBus; SMS; ШинаДанных</PackageTags>
         <Description>The SMS converters for Spoleto.DataBus</Description>
     </PropertyGroup>
+    
     <ItemGroup>
         <PackageReference Include="Spoleto.SMS" Version="1.4.0" />
         <PackageReference Include="Spoleto.SMS.GetSms" Version="1.4.0" />
         <PackageReference Include="Spoleto.SMS.Smsc" Version="1.4.0" />
         <PackageReference Include="Spoleto.SMS.SmsTraffic" Version="1.4.0" />
     </ItemGroup>
+    
     <ItemGroup>
-        <ProjectReference Include="..\..\Spoleto.DataBus.Interfaces\Spoleto.DataBus.Interfaces.csproj">
+        <ProjectReference Include="..\..\..\Spoleto.DataBus.Interfaces\Spoleto.DataBus.Interfaces.csproj">
             <!-- Options to use this project as plugin -->
             <Private>false</Private>
             <ExcludeAssets>runtime</ExcludeAssets>
         </ProjectReference>
+        <ProjectReference Include="..\Spoleto.DataBus.SMS.Interfaces\Spoleto.DataBus.SMS.Interfaces.csproj" />
     </ItemGroup>
-
 
 </Project>

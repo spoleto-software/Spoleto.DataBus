@@ -12,8 +12,8 @@ namespace Spoleto.DataBus.Interfaces.Converters
     /// <summary>
     /// The output converter with generic input and output data types.
     /// </summary>
-    /// <typeparam name="TInput">The input data.</typeparam>
-    /// <typeparam name="TOutput">The ouput data.</typeparam>
+    /// <typeparam name="TInput">The input data type.</typeparam>
+    /// <typeparam name="TOutput">The ouput data type.</typeparam>
     public interface IConverterOut<TInput, TOutput> : IConverterOut, IConverter<TInput, TOutput>
         where TInput : IConverterData
         where TOutput : IConverterData

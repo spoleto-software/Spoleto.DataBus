@@ -1,5 +1,5 @@
 ﻿using Spoleto.DataBus.Interfaces.Converters;
-using Spoleto.DataBus.SMS.Models;
+using Spoleto.DataBus.SMS.Interfaces;
 
 namespace Spoleto.DataBus.SMS.Converters
 {
@@ -9,12 +9,14 @@ namespace Spoleto.DataBus.SMS.Converters
     /// <remarks>
     /// Gets the SMS model by Web API and returns it as is.
     /// </remarks>
-    public class SmsConverterIn : ConverterInBase<SmsModel, SmsModel>
+    public class SmsConverterIn : ConverterInBase<SmsModelIn, SmsModelIn>
     {
-        public override string Name => "SMS";
+        public const string ConnectorName = "SMS"; //todo: add "In" ?
+
+        public override string Name => ConnectorName;
 
         public override string Description => "Gets the SMS model by Web API and returns it as is.";
 
-        public override SmsModel Convert(SmsModel source) => source;
+        public override SmsModelIn Convert(SmsModelIn source) => source;
     }
 }

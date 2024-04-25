@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFrameworks>net7.0;net8.0;netstandard2.0</TargetFrameworks>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+
+    <!-- Package info -->
+    <PropertyGroup>
+        <Title>Spoleto.DataBus.SMS.Interfaces</Title>
+        <PackageId>Spoleto.DataBus.SMS.Interfaces</PackageId>
+        <PackageTags>Spoleto.DataBus.SMS.Interfaces; Spoleto.DataBus; DataBus; SMS; ШинаДанных</PackageTags>
+        <Description>The base classes for Spoleto.DataBus.SMS</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Spoleto.DataBus.Interfaces\Spoleto.DataBus.Interfaces.csproj" />
+    </ItemGroup>
+
+</Project>

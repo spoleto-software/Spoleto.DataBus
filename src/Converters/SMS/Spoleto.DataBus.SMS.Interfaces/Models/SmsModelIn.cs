@@ -1,12 +1,11 @@
 ﻿using Spoleto.DataBus.Interfaces.Models;
-using Spoleto.SMS;
 
-namespace Spoleto.DataBus.SMS.Models
+namespace Spoleto.DataBus.SMS.Interfaces
 {
     /// <summary>
     /// The full information about SMS to send.
     /// </summary>
-    public record SmsModel : IConverterData
+    public record SmsModelIn : IConverterData
     {
         /// <summary>
         /// Gets or sets the message body.
